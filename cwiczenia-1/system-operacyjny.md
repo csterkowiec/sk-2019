@@ -25,7 +25,7 @@ Konfiguracja połączenia sieciowego
 Schemat sieci
 -------------
 
-aby załączyć obrazek 
+Poniżej znajduje się prosty schemat tej sieci.
 
 
 ![alt schemat](https://github.com/csterkowiec/sk-2019/blob/master/cwiczenia-1/Schemat_sieci.png)
