@@ -12,21 +12,23 @@ Wejściowe parametry sieci
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
 |   PC 1 |  
-| IP - address  | | |
-| MASKA  | | |
+| IP - address  | 10.0.2.4 | |
+| MASKA  | 255.255.255.0 | |
 |   |  | |
 | PC 2  |  | |
-| IP - address  | | |
-| MASKA  | | |
+| IP - address  | 10.0.2.5 | |
+| MASKA  | 255.255.255.0 | |
 
 Weryfikacja połączenia
 
 Polecenie
 ```
+ping 10.0.2.5 (będąc na komputerze z adresem 10.0.2.4)
 ```
 
 Efekt
 ```
+Pakiety zostają przesłane - komputery się "widzą".
 ```
 
 Statyczna konfiguracja parametrów połączenia
