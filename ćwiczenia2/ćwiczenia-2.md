@@ -48,10 +48,12 @@ Weryfikacja połączenia
 
 Polecenie
 ```
+ping 172.16.100.100
 ```
 
 Efekt
 ```
+Docelowy host będzie nieosiągalny, ponieważ komputery znajdują się w różnych sieciach.
 ```
 
 Nowa statyczna konfiguracja 
@@ -83,9 +85,9 @@ Warto wiedzieć
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-| Lokalizacja pliku z konfiguracją sieci| | |
-| UP -> Wyłączenie interfejsu sieciowego| | |
-| DOWN -> Włączenie interfejsu sieciowego| | |
+| Lokalizacja pliku z konfiguracją sieci| /etc/sysconfig/network-scripts/ | |
+| UP -> Wyłączenie interfejsu sieciowego| ifdown | |
+| DOWN -> Włączenie interfejsu sieciowego| ifup | |
 | Sprawdzenie obecnych parametrów | | |
 | lista wszystkich interfejsów | | |
 | Które interfejsy jakie porty słuchają | | |
