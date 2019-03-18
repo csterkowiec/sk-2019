@@ -27,8 +27,7 @@ Schemat sieci
 
 aby załączyć obrazek 
 
-```markdown
-![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)![alt schemat](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 
-![alt schemat](images/my-network-schema.png)
-```
+![alt schemat](https://github.com/csterkowiec/sk-2019/blob/master/cwiczenia-1/Schemat_sieci.png)
+
+
