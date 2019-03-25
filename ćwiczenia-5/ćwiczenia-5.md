@@ -61,3 +61,12 @@ Zadanie do domu
     * PC
   * Uzupełnij diagram o adresację sieci oraz poszczególnych urządzeń
   
+
+
+nano /etc/network/interfaces - ustawienie w pliku interfejsów
+
+auto enp0s8
+iface enp0s8 inet static
+  address 192.168.200.1
+  netmask 255.255.255.0
+  up ip route add 192.168.0.0/24 via 192.168.200.2
