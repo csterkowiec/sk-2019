@@ -45,7 +45,8 @@
 * W specyfikacji uwzględnij wielkości sieci oraz ich adresy
 * W specyfikacji uwzględnij konfigurację tablicy routingu
 * Dokumentację graficzną stworzonej architektury przygotuj w programie ``DIA`` lub podobnym
-
+---
+# Rozwiązanie
 1. Router główny połączony z przyłączem internetowym 188.156.220.160/27 
 2. Router główny połączony z podsiecią wifi 192.168.0.0/22 (switch)
 3. Router główny połączony z podsiecią lan 192.168.4.0/23 (switch)
