@@ -56,6 +56,7 @@ Dla sieci lan wybieram pulę adresów prywatnych klasy A aby z łatwością uży
 Tworzę sieć ```10.0.0.0/8```
 
 Dla poszczególnych laboratoriów komputerowych tworzę sieci z połączeniem kondygnacji i numeru sali w trzecim oktecie adresu.
+Maska /26 będzie najodpowiedniejszą, ponieważ będziemy mieli dostępne 62 adresy hostów.
 
 W ten sposób powstają sieci:
 
