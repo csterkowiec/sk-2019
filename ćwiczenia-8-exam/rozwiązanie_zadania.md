@@ -6,6 +6,7 @@ Wyliczam maskę dla większej podsieci: potrzebna będzie maska /19 dająca nam 
 Adres podsieci ```LAN1```: ```172.22.128.0/19``` z adresem rozgłoszeniowym ```172.22.159.255```
 
 Adres podsieci ```LAN2```: ```172.22.160.0/23``` z adresem rozgłoszeniowym ```172.22.161.255```
+---
 
 
 ![Diagram](Diagram_zadanie8.png)
