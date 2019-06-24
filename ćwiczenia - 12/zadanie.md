@@ -82,7 +82,7 @@ W ten sposób powstają sieci:
 - ```ip addr add {} dev {}```
 - ```ip route add default via {} ```
 - IP forwarding w pliku ```/etc/sysctl.conf``` / ```echo 1 > /proc/sys/net/ipv4/ip_forward```
-- Masquerade ```iptables --table nat --append POSTROUTING --out-interface {} -j MASQUERADE``` / ``iptables --append FORWARD --in-interface 172.22.254.1 -j ACCEPT``
+- Masquerade ```iptables --table nat --append POSTROUTING --out-interface {} -j MASQUERADE``` / ``iptables --append FORWARD --in-interface {} -j ACCEPT``
 - ustawienie DHCP dla routera WiFi. ```apt-get install isc-dhcp-server``` oraz ```systemctl start isc-dhcp-server```
 - konfiguracja pliku ```/etc/dhcp/dhcpd.conf```
 
