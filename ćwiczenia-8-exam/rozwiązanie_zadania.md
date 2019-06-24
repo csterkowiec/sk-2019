@@ -11,6 +11,11 @@ Adres podsieci ```LAN2```: ```172.22.160.0/23``` z adresem rozgłoszeniowym ```1
 
 # Konfiguracja:
 
+## Sieć NAT LAN1:
+![LAN1](lan1.png)
+
+## Sieć NAT LAN2:
+![LAN2](lan2.png)
 
 ---
 # Diagram:
