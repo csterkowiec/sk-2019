@@ -47,9 +47,46 @@
 * Dokumentację graficzną stworzonej architektury przygotuj w programie ``DIA`` lub podobnym
 ---
 # Rozwiązanie
-1. Router główny połączony z przyłączem internetowym 188.156.220.160/27 
-2. Router główny połączony z podsiecią wifi 192.168.0.0/22 (switch)
-3. Router główny połączony z podsiecią lan 192.168.4.0/23 (switch)
-4. Switch wifi połączony z podsiecią wifi0 192.168.1.0/24 (routerwifi0)
-5. Switch wifi połączony z podsiecią wifi1 192.168.2.0/24 (routerwifi1)
-6. Switch wifi połączony z podsiecią wifi2 192.168.3.0/24 (routerwifi2)
+Sieć WiFi ma pomieścić 800 urządzeń, dlatego korzystam z maski `/22`. 
+
+Tworzę sieć ```192.168.0.0/22``` na jej potrzebę
+
+Dla sieci lan wybieram pulę adresów prywatnych klasy A aby z łatwością używać adresów odpowiadających nazwom sal.
+
+Tworzę sieć ```10.0.0.0/8```
+
+Dla poszczególnych laboratoriów komputerowych tworzę sieci z połączeniem kondygnacji i numeru sali w trzecim oktecie adresu.
+
+W ten sposób powstają sieci:
+
+## Poziom 0:
+- Lab09: ```10.0.9.0/26```
+- Lab13: ```10.0.13.0/26```
+- Lab14: ```10.0.14.0/26```
+- Lab17: ```10.0.17.0/26```
+
+## Poziom 1:
+- Lab115: ```10.0.115.0/26```
+- Lab116: ```10.0.116.0/26```
+- Lab117: ```10.0.117.0/26```
+- Lab122: ```10.0.122.0/26```
+
+## Poziom 2:
+- Lab201: ```10.0.201.0/26```
+- Lab202: ```10.0.202.0/26```
+- Lab203: ```10.0.203.0/26```
+- Lab204: ```10.0.204.0/26```
+
+# Potrzebne polecenia:
+
+- ```ip addr add {} dev {}```
+- ```ip route add default via {} ```
+- IP forwarding w pliku ```/etc/sysctl.conf``` / ```echo 1 > /proc/sys/net/ipv4/ip_forward```
+- Masquerade ```iptables --table nat --append POSTROUTING --out-interface {} -j MASQUERADE``` / ``iptables --append FORWARD --in-interface 172.22.254.1 -j ACCEPT``
+- ustawienie DHCP dla routera WiFi. ```apt-get install isc-dhcp-server``` oraz ```systemctl start isc-dhcp-server```
+- konfiguracja pliku ```/etc/dhcp/dhcpd.conf```
+
+
+# Diagram:
+![Diagram12](diagram_zadanie12.png)
+
