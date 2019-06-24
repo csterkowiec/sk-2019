@@ -17,6 +17,21 @@ Adres podsieci ```LAN2```: ```172.22.160.0/23``` z adresem rozgłoszeniowym ```1
 ## Sieć NAT LAN2:
 ![LAN2](lan2.png)
 
+## PC0: 
+![pc0ipa](pc0ipa.png)
+
+## PC1:
+![pc1ipa](pc1ipa.png)
+
+## PC2:
+![pc2ipa](pc2ipa.png)
+
+### Użyte polecenia:
+- ip addr add
+- echo 1 > /proc/sys/net/ipv4/ip_forward
+- iptables --table nat --append POSTROUTING --out-interface 10.0.2.15 -j MASQUERADE
+- iptables --append FORWARD --in-interface 172.22.160.1 -j ACCEPT
+
 ---
 # Diagram:
 ![Diagram](Diagram_zadanie8.png)
